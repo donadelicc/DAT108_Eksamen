@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;Lambdas_and_streams/src&apos;&#x0D;&#x0A;- Original project: &apos;Lambdas_and_streams&apos;&#x0D;&#x0A;- Destination element: &apos;Lambdas_and_streams/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     eksempelklasser&#x0D;&#x0A;     lambda_overview&#x0D;&#x0A;     exercise&#x0D;&#x0A;     lambda_vs_traditionalApproach&#x0D;&#x0A;- Update references to refactored element" description="Move folders" destination="/src" element1="eksempelklasser" element2="lambda_overview" element3="exercise" element4="lambda_vs_traditionalApproach" files="0" flags="589830" folders="4" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1702036343632" units="0" version="1.0"/>
+</session>
