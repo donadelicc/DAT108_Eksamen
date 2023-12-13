@@ -69,4 +69,5 @@ Når brukes datatypen symbol? Demonstrer bruken av symbol med et kodeeksempel.
 
     --> Ikke like
 
+C --> se student.js
     
