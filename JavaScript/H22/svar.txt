@@ -1,0 +1,72 @@
+Oppgave 2
+
+A
+
+
+window
+- Representerer nettleservinduet
+
+        window.alert("Hei! Dette er en melding.");
+         window.setTimeout(() => {
+             alert("Dette meldingen vises etter 2 sekunder");
+           }, 2000);  
+
+         window.setTimeout(() => {
+             window.open('https://www.google.com');
+         }, 2000);
+
+navigator
+
+- Inneholder informasjon om nettleseren som kjører JavaScript-koden.
+
+        navigator.geolocation.getCurrentPosition(position => {
+        console.log("Latitude: " + position.coords.latitude);
+        console.log("Longitude: " + position.coords.longitude);
+        });
+        console.log(navigator.userAgent);
+
+history
+- Gir tilgang til nettleserens historikk-sesjon
+
+    Sender brukeren tilbake
+    history.back();      
+
+screen
+- Inneholder informasjon om brukerens skjerm
+
+
+B
+
+i
+JavaScript betegnes som et type-svakt språk (weakly typed, loosely typed).
+Hva betyr dette i praksis i JavaScript? Når bestemmes en variable sin type i JavaScript?
+
+- JavaScript har ikke spesifikk datatyper
+- Konverter datatyper automatisk
+    let sum = 3 + "3"  --> "33"
+- Kan sammenligne ulike datatyper
+    "123" == 123
+
+ii
+
+Når brukes datatypen symbol? Demonstrer bruken av symbol med et kodeeksempel.
+
+    const student = {
+        id: Symbol(),
+        navn: "Ola",
+    };
+
+    const student2 = {
+        id: Symbol(),
+        navn: "Kari",
+    };
+
+    if(student.id === student2.id) {
+        console.log("Like");
+    } else {
+        console.log("Ikke like");
+    }
+
+    --> Ikke like
+
+    

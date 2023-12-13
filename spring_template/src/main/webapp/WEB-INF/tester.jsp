@@ -14,7 +14,7 @@
 <p>${item}</p>
 
 <c:forEach var="item" items="${items}">
-    <p>${item}</p>
+    <p>${item.item}</p>
 </c:forEach>
 
 </body>
