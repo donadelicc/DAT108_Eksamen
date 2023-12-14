@@ -12,6 +12,10 @@ class Studentarkiv{
         this.tlf = tlf;
     }
 
+    test(student) {
+        console.log(student.id)
+    }
+
     nystudent(student) {
         if(!this.gyldigStudent(student)) {
             return null;
@@ -134,3 +138,12 @@ console.log(`Legge til ny tlf for Anne: ${anneNyTelefon}`)
 
 console.log("---------------------------------\nARKIVDATA:\n---------------------------------")
 const arkivdata = arkiv.eksporterdata()
+
+
+const test = arkiv.test({
+    id: 101,
+    etternavn: "Olsen",
+    fornavn: "Ole",
+    tlf: ["112 23 344", "323 22 323"]
+    });
+

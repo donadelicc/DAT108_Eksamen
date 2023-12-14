@@ -14,7 +14,9 @@ const element = document.getElementById('elementToRemove');
 element.parentNode.removeChild(element);
 
 // Modifisere innholdet
-document.getElementById('someElementId').innerHTML = 'Oppdatert innhold';
+document.getElementById('someElementId').innerHTML = 'Oppdatert innhold';'
+
+
 
 
 
@@ -196,17 +198,3 @@ const formParent = formElement.parentNode;
 const element3 = document.querySelector('.someClass');
 const nextSibling2 = element.nextElementSibling;
 const previousSibling = element.previousElementSibling;
-
-
-
-
-
-// Finne elementer basert på egenskaper (f.eks., querySelector, getElementsByTagName, getElementsByClassName, querySelectorAll).
-// Egenskaper av HTML-elementer som TABLE, THEAD, TBODY​​.
-// Metode querySelector:
-
-// Returnerer det første elementet som stemmer med en gitt CSS-selektor.
-// Returnerer null ved ingen treff eller ved ugyldig CSS-selektor​​.
-// Demonstrasjon av querySelector:
-
-// Praktisk bruk av querySelector som en dokumentmetode og som en elementmetode​​.

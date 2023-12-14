@@ -1,0 +1,9 @@
+
+
+opprette klasser og objekter
+
+map, set, array
+ - metoden til disse
+
+eventlistner
+cloci
