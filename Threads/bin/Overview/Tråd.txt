@@ -1,0 +1,41 @@
+Hva er en tråd?
+
+- Em tråd er en prosess som gjør at applikasjonen kan gjøre flere operasjoner samtidig.
+- Særlig nyttig i GUI og nettverksprogrammering
+
+Hvordan fungerer det?
+
+- Multitråding: Java tillater flere tråder å kjøre samtidig, her deler disse ressurser og kan arbeide på forskjellige oppgaver innenfor ett og samme program.
+    - Fordeler:
+        1. Bedre utnytteøse av en enkelt CPU
+        2. Bedre utnyttelse av flere CPU-er eller kjerner
+        3. Bedre brukeropplevelse mtp response
+        4. Bedre brukeropplevelse mtp rettferdighet
+    - Ulemper:
+        1. Mer kompleks utforming/funksjonalitet
+        2. Kontekst switching
+        3. Økt ressursforbruk
+        
+- Kontektsbytte: Operativsystemet kan bytte mellom tråder, noe som gir inntrykket av at trådene kjører "samtidig".
+
+Hvordan opprette tråder i Java:
+- Det er to måter:
+1. Utvide `Thread` klassen og overskrive `run()` metoden.
+2. Implementere `Runnable` og dens `run()`metode.
+
+Vitkige konsepter
+1. Livssyklus: En tråd har en livssyklus som inkludere 
+    ny (new), 
+    kjørbar (runnable), 
+    blokkert (blocked), 
+    ventende (waiting), 
+    tidsavhengig ventende (timed waiting) og 
+    avsluttet (terminated).
+
+2. Synkroninsering: For å unngå problemer med flere tråder som bruker delte ressurser samtidig, brukes synkronisering.
+
+3. Deadlocks: Dette er en situasjon der en eller flere tråder er blokkert for alltid, og venter på hverandre. Dette må unngås.
+
+4. Benyttelse av`Executor`rammen for bedre håndtering av tråder
+
+

@@ -44,7 +44,7 @@ public class basics {
     // Oppgave 1:
     private static List<String> filterWordsStartingWith(List<String> list) {
         // Fyll ut kroppen til metoden
-        return;
+        //return;
     }
 
     // Oppgave 2:
