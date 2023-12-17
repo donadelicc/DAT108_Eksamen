@@ -1,0 +1,28 @@
+INNHOLD:
+
+> Hvordan hindre cracking
+    › Gjøre det vanskelig å kunne hente ut passorddata fra app
+› Hvordan lagre passord på en sikker måte
+    › Kryptografisk hashet med random individuelt salt
+› Hvordan hjelpe bruker til å velge et sikkert passord
+    › Ha minimumskrav og skript som viser passordstyrke
+› Hvordan sjekke om vi har riktig passord ved innlogging
+›    Hashe input-passord og se om det gir korrekt digest
+
+
+ANGREPSTEKNIKKER:
+
+1. "Brute force"-angrep: 
+Siden vi ikke kan utlede passordet fra det hashete,
+kan vi i stedet prøve med alle tenkelige passord. Dette tar tid, men korte
+passord vil fort bli identifisert på denne måten.
+
+2. Ordliste-angrep:
+I stedet for å prøve alle mulige tegnkombinasjoner kan
+man i stedet ta utgangspunkt i en ordliste. Dette tar mindre tid, og passord
+som er variasjoner av vanlige ord blir fort funnet.
+3. Oppslagstabell-angrep:
+Det finnes tabeller over "ferdig knekkede"
+passord for vanlige hashing-algoritmer. Her kan man rett og slett slå opp
+passordet som tilhører ulike "digests". Slike tabeller kan f.eks. inneholde
+digests for alle passord inntil 8 tegn, dvs. for mange milliarder passord.

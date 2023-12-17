@@ -2,6 +2,12 @@ package streams_oppgaver;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 
 public class basics {
 	
@@ -11,95 +17,71 @@ public class basics {
 
     public static void main(String[] args) {
         // Oppgave 1:
-        System.out.println("Oppgave 1: " + filterWordsStartingWith(words));
+        BiFunction<List<String>, String, List<String>> filterWordsStartingWith = (list, prefix) -> {
+            return list.stream()
+                .filter(w -> w.startsWith(prefix))
+                .collect(Collectors.toList());
+        };
+        System.out.println("Oppgave 1: " + filterWordsStartingWith.apply(words, "b"));
 
-        // Oppgave 2:
-        System.out.println("Oppgave 2: " + doubleAllNumbers(numbers));
+        // Oppgave 2
+        UnaryOperator<List<Integer>> doubleAllNumbers = (list) -> {
+            return list.stream()
+                .map(x -> x*2)
+                .collect(Collectors.toList());
+        };
+        System.out.println("Oppgave 2: " + doubleAllNumbers.apply(numbers));
 
-        // Oppgave 3:
-        System.out.println("Oppgave 3: " + convertToUpperCaseAndConcatenate(sentences));
+        // public static List<Integer> doubleAllNumbers(List<Integer> list) {
+        //     return list.stream()
+        //         .map(x -> x*2)
+        //         .collect(Collectors.toList());
+        // };
+        // System.out.println(("Oppgave 3: " + doubleAllNumbersMethod(numbers)));
 
-        // Oppgave 4:
-        System.out.println("Oppgave 4: " + findLongestWord(words));
+        // // Oppgave 3:
 
-        // Oppgave 5:
-        System.out.println("Oppgave 5: " + findSumOfSquares(numbers));
+        Function<List<String>, String> convertToUpperCaseAndConcatenate = (list) -> {
+            return list.stream()
+                .map(String::toUpperCase)
+                .collect(Collectors.joining());
+        };
 
-        // Oppgave 6:
-        System.out.println("Oppgave 6: " + countWordsWithLength(words, 5));
+        System.out.println("Oppgave 3: " + convertToUpperCaseAndConcatenate.apply(sentences));
 
-        // Oppgave 7:
-        System.out.println("Oppgave 7: " + concatenateDistinctLetters(words));
+        // // Oppgave 4:
 
-        // Oppgave 8:
-        System.out.println("Oppgave 8: " + findAverageWordLength(sentences));
+        Function<List<String>, String> findLongestWord = (list) -> {
+            return list.stream()
+                .reduce((w1, w2) -> {
+                    if(w1.length() > w2.length()) {
+                        return w1;
+                    } else {
+                        return w2;
+                    }
+                })
+                .orElse("");
+        };
 
-        // Oppgave 9:
-        System.out.println("Oppgave 9: " + squareAndSumEvenNumbers(numbers));
+        System.out.println("Oppgave 4: " + findLongestWord.apply(words));
 
-        // Oppgave 10:
-        System.out.println("Oppgave 10: " + joinWordsWithComma(words));
+        // // Oppgave 5:
+        // System.out.println("Oppgave 5: " + findSumOfSquares(numbers));
+
+        // // Oppgave 6:
+        // System.out.println("Oppgave 6: " + countWordsWithLength(words, 5));
+
+        // // Oppgave 7:
+        // System.out.println("Oppgave 7: " + concatenateDistinctLetters(words));
+
+        // // Oppgave 8:
+        // System.out.println("Oppgave 8: " + findAverageWordLength(sentences));
+
+        // // Oppgave 9:
+        // System.out.println("Oppgave 9: " + squareAndSumEvenNumbers(numbers));
+
+        // // Oppgave 10:
+        // System.out.println("Oppgave 10: " + joinWordsWithComma(words));
     }
-
-    // Oppgave 1:
-    private static List<String> filterWordsStartingWith(List<String> list) {
-        // Fyll ut kroppen til metoden
-        //return;
-    }
-
-    // Oppgave 2:
-    private static List<Integer> doubleAllNumbers(List<Integer> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 3:
-    private static String convertToUpperCaseAndConcatenate(List<String> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 4:
-    private static String findLongestWord(List<String> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 5:
-    private static int findSumOfSquares(List<Integer> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 6:
-    private static long countWordsWithLength(List<String> list, int length) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 7:
-    private static String concatenateDistinctLetters(List<String> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 8:
-    private static double findAverageWordLength(List<String> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 9:
-    private static int squareAndSumEvenNumbers(List<Integer> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
-    // Oppgave 10:
-    private static String joinWordsWithComma(List<String> list) {
-        // Fyll ut kroppen til metoden
-        return /*resultatet*/;
-    }
-
 
 }

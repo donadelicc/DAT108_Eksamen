@@ -1,0 +1,19 @@
+PASSORD
+
+Korrekt håndtering og lagring av brukeres passord er helt nødvendig av sikkerhets- og
+personvernhensyn.
+Beskriv i tekniske termer hvordan brukeres valgte passord bør prosesseres og lagres (i database) ved
+f.eks. oppretting av ny brukerkonto på en tjeneste. Fortell også hvordan de ulike skrittene i prosessen
+er med på å beskytte brukerens passord mot cracking
+
+
+Passordet til en bruker på en nettside burde lagres i en database som en kryptografisk hash, f.eks. gjennom SHA256.
+Passordet burde også saltes slik at dersom en angriper får på et vis får tak i det hash-ede passordet 
+    så kan angriperen ikke bruke kjente reverseringsteknikker for å få tak i det faktiske passordet.
+    Salting gjør at hashen kombinerte med en salt verdi blir en helt tilfeldig kombinasjon som er umulig å cracke.
+
+Det er også andre ting som kan bidra til økt grad av beskyttelse:
+    1. Gi brukeren feedback dersom passordet består av kjente ordliste passord
+    2. Be brukeren bruk en kombinasjon av tall og bokstaver får å øke tiden det tar å "Brute force-e" passordet.
+
+

@@ -25,7 +25,7 @@ public class Comparator_Example {
 		        return a.compareTo(b);
 		    }
 		});	
-
+        
         // Shuffle the list to reset the order
         Collections.shuffle(list);
 

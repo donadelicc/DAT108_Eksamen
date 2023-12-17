@@ -29,6 +29,7 @@ public class Collections_Example {
 		// Tilegner elementene en tilfeldig plass i listen
 		Collections.shuffle(numbers);
 		numbers.forEach(System.out::print);
+		
 		//Reversering
 		Collections.reverse(numbers);
 		System.out.println("Reversed list: " + numbers);

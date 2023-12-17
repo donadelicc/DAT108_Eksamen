@@ -12,9 +12,7 @@ class Studentarkiv{
         this.tlf = tlf;
     }
 
-    test(student) {
-        console.log(student.id)
-    }
+
 
     nystudent(student) {
         if(!this.gyldigStudent(student)) {

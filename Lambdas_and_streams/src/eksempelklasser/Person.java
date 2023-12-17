@@ -5,6 +5,8 @@ public class Person {
 	private String firstname;
 	private String lastname;
 	private int age;
+
+	public Person() {}
 	
 	public Person(String firstname, String lastname, int age) {
 		super();
